@@ -2,6 +2,7 @@
 
 :root{
     --color_gold:gold;
+    --color_choices:#b4b14f;
     --bold:bold;
 
     /*Font size*/
@@ -15,7 +16,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
+
 
 .banner{
     background: linear-gradient(90deg, rgba(2,2,6,0.9220063025210083) 0%, rgba(56,56,56,0.9220063025210083) 2%, rgba(22,22,25,1) 48%, rgba(46,47,49,1) 75%, rgba(117,117,117,0.8939950980392157) 100%);
@@ -23,7 +26,6 @@
     color: var(--color_gold);
     font-weight: var(--bold);
     font-size: var(--sizeBg);
-    height: 100px;
 }
 
 .banner ul{
@@ -34,4 +36,38 @@
 .banner ul li{
     list-style: none;
     margin-top: 15px;
+}
+
+
+/*Game section*/
+
+.game{
+    background: rgb(217,112,42);
+    background: linear-gradient(90deg, rgba(217,112,42,0.9220063025210083) 0%, rgba(172,87,35,1) 16%, rgba(207,74,22,1) 74%, rgba(255,141,85,0.8939950980392157) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100lvh;
+    gap: 50px;
+}
+
+.gameChoices{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+    width: inherit;
+}
+
+.choice{
+    background-color: var(--color_choices);
+    padding: 70px;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.choice:hover{
+    background-color: var(--color_gold);
+    color: red;
 }

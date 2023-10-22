@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=MedievalSharp&family=Open+Sans:wght@500&family=Yuji+Hentaigana+Akari&display=swap');
 
+:root{
+    --color_gold:gold;
+    --bold:bold;
+
+    /*Font size*/
+    --sizeSm:15px;
+    --sizeMd:30px;
+    --sizeBg:50px;
+}
+
 *,*::after,*::before{
     font-family: 'MedievalSharp',sans-serif;
     margin: 0;
@@ -7,3 +17,21 @@
     box-sizing: border-box;
 }
 
+.banner{
+    background: linear-gradient(90deg, rgba(2,2,6,0.9220063025210083) 0%, rgba(56,56,56,0.9220063025210083) 2%, rgba(22,22,25,1) 48%, rgba(46,47,49,1) 75%, rgba(117,117,117,0.8939950980392157) 100%);
+    text-align: center;
+    color: var(--color_gold);
+    font-weight: var(--bold);
+    font-size: var(--sizeBg);
+    height: 100px;
+}
+
+.banner ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.banner ul li{
+    list-style: none;
+    margin-top: 15px;
+}

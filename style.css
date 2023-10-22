@@ -38,6 +38,13 @@
     margin-top: 15px;
 }
 
+@media(max-width:687px){
+    .banner{
+        font-size: var(--sizeMd);
+    }
+}
+
+
 
 /*Game section*/
 
@@ -47,17 +54,56 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
     height: 100lvh;
     gap: 50px;
 }
 
+/*Game instructions*/
+.gameInstructions{
+    text-align: center;
+    color: white;
+}
+
+.gameInstructions h2{
+    margin-bottom: 20px;
+    font-size: var(--sizeBg);
+}
+
+
+.gameInstructions p{
+    font-size: var(--sizeMd);
+    font-weight: var(--bold);
+}
+
+.gameInstructions li{
+    font-size: var(--sizeMd);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media(max-width:687px){
+    .gameInstructions h2{
+        font-size: var(--sizeMd);
+        margin-top: 15px;
+    }
+    .gameInstructions p{
+        font-size: 25px;
+    }
+
+    .gameInstructions li{
+       font-size: 18px;
+    }
+}
+
+/*Game Choices*/
 .gameChoices{
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 15px;
     width: inherit;
+    font-size: var(--sizeMd);
 }
 
 .choice{
@@ -70,4 +116,12 @@
 .choice:hover{
     background-color: var(--color_gold);
     color: red;
+}
+@media(max-width:687px){
+    .gameChoices{
+        flex-direction: column;
+        width: 80%;
+        padding: 50px;
+        gap: 12px;
+    }
 }

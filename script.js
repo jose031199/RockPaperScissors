@@ -17,6 +17,7 @@ function playRound(userSelection){
     if (userSelection == 'rock' && computerChoice == 'scissors' ) {
         countUser+=1;
         message = "You win, "+userSelection+" wins to "+computerChoice;
+
     }else if(userSelection == 'scissors' && computerChoice == 'rock'){
         countComputer+=1;
         message = "You lose, "+userSelection+" lose to "+computerChoice;
@@ -36,6 +37,7 @@ function playRound(userSelection){
         message = "It's a tie";
 
     }
+    message +='User: '+countUser+' Computer: '+countComputer;
     return message;
 }
 

@@ -50,9 +50,9 @@ function game(userChoice){
    let message = playRound(userChoice);
    const divResult = document.getElementById('resultado');
    let result = '';
-    console.log(message)
+    //console.log(message)
     count+=1;
-    console.log(count)
+    //console.log(count)
     console.log(divResult)
 
 

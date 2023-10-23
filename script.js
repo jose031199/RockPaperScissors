@@ -69,6 +69,7 @@ function game(userChoice){
             result = 'Tie'
         }
         document.getElementById('round').innerHTML += '<p>'+result+'</p>'
+        count = 0;
     }
 
 }

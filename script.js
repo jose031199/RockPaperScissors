@@ -1,5 +1,4 @@
 //Function of computer to Choose an option
-
 let countUser = 0;
 let countComputer = 0;
 let count = 0;
@@ -16,7 +15,7 @@ function playRound(userSelection){
     let message = "";
     if (userSelection == 'rock' && computerChoice == 'scissors' ) {
         countUser+=1;
-        message = "You win, "+userSelection+" wins to "+computerChoice;
+        message = " You win, "+userSelection+" wins to "+computerChoice;
 
     }else if(userSelection == 'scissors' && computerChoice == 'rock'){
         countComputer+=1;
@@ -44,18 +43,14 @@ function playRound(userSelection){
 function playerChoice(e){
     value = e.textContent.toLowerCase().trim();
     game(value);
-    
-    //return value;
 }
 
 function game(userChoice){
    let message = playRound(userChoice);
    const divResult = document.getElementById('resultado');
    let result = '';
-    //console.log(message)
     count+=1;
-    //console.log(count)
-    console.log(divResult)
+
 
 
     document.getElementById('round').innerHTML +='<h3>'+count+'.'+message+'</h3>'; 
@@ -68,9 +63,21 @@ function game(userChoice){
         }else{
             result = 'Tie'
         }
-        document.getElementById('round').innerHTML += '<p>'+result+'</p>'
+        document.getElementById('round').innerHTML += `<p style="font-weight:bold; font-size:30px color:${result=='You win'? 'gold':'red'};">${result}</p>`
         count = 0;
+        countUser = 0;
+        countComputer = 0;
+
+        setTimeout(()=>{
+            eraseText()
+        }, 5000);
     }
+
+}
+
+function eraseText(){
+    document.getElementById("resultado").innerHTML="";
+    document.getElementById("round").innerHTML="";
 
 }
 
